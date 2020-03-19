@@ -1,19 +1,13 @@
-<div *ngFor="let p of product">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" [src]="p.img" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">{{p.name}}</a>
-                </h4>
-                <h5>{{p.price}}$</h5>
-                <p class="card-text">{{p.desc}}</p>
-                <p class="card-text" style="color: crimson;">{{p.status ? 'In stock':'Out stock'}}</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small><hr>
-                <!-- <button class="btn btn-primary" (click)="changeStatus()" style="float: right;">Click me!</button><hr> -->
-                <input type="text" [(ngModel)]="p.name"> 
-              </div>
-            </div>
-          </div>
-      
+<!-- <div class="card h-100">
+    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+    <div class="card-body">
+    <h4 class="card-title">
+        <a href="#">Item One</a>
+    </h4>
+    <h5>$24.99</h5>
+    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+    </div>
+    <div class="card-footer">
+    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+    </div>
+</div> -->
