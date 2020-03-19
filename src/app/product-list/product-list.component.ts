@@ -25,7 +25,7 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+selected : Product;
   products: Product[] = [
     {
       id: 1,
@@ -60,5 +60,9 @@ export class ProductListComponent implements OnInit {
   }
   removeItem(id){
     this.products = this.products.filter(product => product.id != id);
+  }
+
+  showDetail(product){
+this.selected = product;
   }
 }
