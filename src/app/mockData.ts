@@ -5,7 +5,7 @@ export const data : Product[] = [
           id: 1,
           name: "HP",
           price: 40.99,
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur  1!',
+          desc: 'This is product 1!',
           status: true,
           img: 'https://www.anphatpc.com.vn/media/product/30079_msi_gf63_thin_9rcx_645vn_1.jpg'
         },
@@ -13,7 +13,7 @@ export const data : Product[] = [
           id: 2,
           name: "MSI",
           price: 35.99,
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur  2!',
+          desc: 'This is product 2!',
           status: false,
           img: 'https://www.anphatpc.com.vn/media/product/30747_laptop_msi_gs65_stealth_9sd_1409vn_1.png'
         },
@@ -21,7 +21,7 @@ export const data : Product[] = [
           id: 3,
           name: "Asus",
           price: 88.99,
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur  3!',
+          desc: 'This is product 3!',
           status: false,
           img: 'https://xgear.vn/wp-content/uploads/2018/07/61SFIq6wpJL._SL1000_.jpg'
         },
