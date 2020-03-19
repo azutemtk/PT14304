@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
 import { SliderComponent } from './slider/slider.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { CategoryComponent } from './category/category.component';
