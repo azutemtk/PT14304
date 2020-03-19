@@ -12,7 +12,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, SliderComponent, ProductListComponent, CategoryComponent, ProductComponent, AddFormComponent, AddProductComponent ],
+  declarations: [ AppComponent, SliderComponent, ProductListComponent, CategoryComponent, ProductComponent, AddFormComponent, AddProductComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
