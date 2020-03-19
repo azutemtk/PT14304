@@ -7,7 +7,8 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { SliderComponent } from './slider/slider.component';
 import { ProductComponent } from './product/product.component';
 import { CategoryComponent } from './category/category.component';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { AddProductComponent } from './add-product/add-product.component'
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms'
     SliderComponent,
     ProductComponent,
     CategoryComponent,
+    AddProductComponent,
   ],
   imports: [
     BrowserModule,
