@@ -1,0 +1,45 @@
+
+<h2 style="text-transform: uppercase;">Product manager</h2>
+<a class="nav-link" routerLink="add" routerLinkActive = "active">Add product</a>
+
+<!-- <table class="table table-striped mt-3 ">
+  <tr>
+    <th>ID</th>
+    <th>Product name</th>
+    <th>Price</th>
+    <th>Desc</th>
+    <th>Image</th>
+  </tr>
+  <tr  *ngFor="let product of products">
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.desc}}</td>
+    <td class="text-center"><img src="{{product.img}}" style="width: 90px;height: 120px;"></td>
+  </tr>
+</table> -->
+<table class="table table-bordered">
+  <thead >
+    <tr id="tableHeader">
+      <th class="text-center">Mã</th>
+      <th class="text-center">Tên sản phẩm</th>
+      <th class="text-center">Giá nhập</th>
+      <th class="text-center">Hình ảnh</th>
+      <th class="text-center"> Thao tác</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let product of products">
+    <td id="col" class="text-left">{{product.id}}</td>
+    <td id="col" class="text-center">{{product.name}}</td>
+    <td id="col" class="text-center">{{product.price}}$</td>
+    <td class="text-center"><img src="{{product.img}}" style="width: 200px;height: 120px;"></td>
+    <td>
+      <button class="btn btn-primary" routerLink="/product/{{product.id}}">Chi tiết</button>
+      <i style="float: right;"><button class="btn btn-primary" (click)="removeItem(product.id)">Delete</button></i>
+      <a style="color: red; cursor: pointer; margin-left: 5px;" 
+        title="Xóa">
+        <i class="fa fa-trash-o"></i>
+      </a>
+    </td>
+  </tbody>
+</table>

@@ -1,9 +1,11 @@
+<h2>Add Product</h2>
 <form class="w-50 mx-auto mt-3">
 
   <div class="form-group">
-    <label for="">  {{address}}</label>
+    <input type="text" name="id" class="form-control"placeholder="ID" [(ngModel)]="product.id">
     <input type="text" name="name" class="form-control"placeholder="Product Name" [(ngModel)]="product.name">
     <input type="text" name="price" class="form-control"placeholder="Price" [(ngModel)]="product.price">
+    <input type="text" name="img" class="form-control"placeholder="Image" [(ngModel)]="product.img">
   </div>
   <button type="submit" class="btn btn-primary" (click)="addProduct()">Submit</button>
 </form>

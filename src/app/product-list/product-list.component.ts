@@ -18,11 +18,11 @@ export class ProductListComponent implements OnInit {
      }
  
   ngOnInit(): void {
-    this.products = this.productService.getProducts();
+    // this.products = this.productService.getProducts();
+    this.getProductFromApi();
   }
  
   removeItem(id){
-    this.products = this.productService.removeProduct(id);
     // this.products = this.productService.removeProduct(id);
   }
 
@@ -33,4 +33,11 @@ export class ProductListComponent implements OnInit {
   close(){
     this.selected = null;
   }
+
+  getProductFromApi(){
+    this.productService.getProductFromApi().subscribe(data =>{
+      console.log(data);
+      this.products=data;
+  });
+}
 }
