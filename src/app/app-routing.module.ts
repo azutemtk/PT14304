@@ -7,6 +7,7 @@ import { ProductManagerComponent } from './product-manager/product-manager.compo
 import { NotFoundComponent } from './not-found/not-found.component'
 import { ProductDetailComponent } from './product-detail/product-detail.component'
 import { NewsListComponent } from './news-list/news-list.component'
+import { ContactComponent } from './contact/contact.component'
 const routes: Routes= [
   {
     path: '', redirectTo:'home', pathMatch:'full'
@@ -32,6 +33,9 @@ const routes: Routes= [
   },
   {
     path : 'manager/add', component:AddProductComponent
+  },
+  {
+    path : 'contact', component:ContactComponent
   },
   {
     path: '**', component: NotFoundComponent

@@ -15,11 +15,12 @@ import { ProductManagerComponent } from './product-manager/product-manager.compo
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { HttpClientModule} from '@angular/common/http';
-import { NewsListComponent } from './news-list/news-list.component'
+import { NewsListComponent } from './news-list/news-list.component';
+import { ContactComponent } from './contact/contact.component'
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule, HttpClientModule ],
-  declarations: [ AppComponent, HelloComponent, SliderComponent, ProductListComponent, CategoryComponent, ProductComponent, AddFormComponent, AddProductComponent, ProductManagerComponent, NotFoundComponent, ProductDetailComponent, NewsListComponent ],
+  declarations: [ AppComponent, HelloComponent, SliderComponent, ProductListComponent, CategoryComponent, ProductComponent, AddFormComponent, AddProductComponent, ProductManagerComponent, NotFoundComponent, ProductDetailComponent, NewsListComponent, ContactComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
