@@ -18,8 +18,8 @@ export class ProductListComponent implements OnInit {
      }
  
   ngOnInit(): void {
-    // this.products = this.productService.getProducts();
-    this.getProductFromApi();
+    this.products = this.productService.getProducts();
+    // this.getProductFromApi();
   }
  
   removeItem(id){
