@@ -22,7 +22,8 @@ export class ProductService {
   }
 
   getProduct(id){
-    return this.products.find(product => product.id == id);
+    // return this.products.find(product => product.id == id);
+    return this.http.get<Product>(`${this.api}/${id}`)
   }
 
   removeProduct(id){
@@ -35,5 +36,9 @@ export class ProductService {
     const newProduct = { id: 11, ...product};
     this.products.push(newProduct);
     console.log(this.products)
+  }
+
+  updateProduct(): Observable<Product>{
+  return this.http.put<Product>(`{$this.api}/${product.id}`,product);
   }
 }

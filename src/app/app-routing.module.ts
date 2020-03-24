@@ -7,6 +7,7 @@ import { ProductManagerComponent } from './product-manager/product-manager.compo
 import { NotFoundComponent } from './not-found/not-found.component'
 import { ProductDetailComponent } from './product-detail/product-detail.component'
 import { NewsListComponent } from './news-list/news-list.component'
+// import { EditProductComponent } from './edit-product/edit-product.component'
 import { ContactComponent } from './contact/contact.component'
 const routes: Routes= [
   {
@@ -25,6 +26,9 @@ const routes: Routes= [
   {
     path : 'product/:id', component:ProductDetailComponent
   },
+  // {
+  //   path : 'product/edit/:id', component:EditProductComponent
+  // },
   {
     path : 'product', component:ProductListComponent
   },
@@ -36,6 +40,9 @@ const routes: Routes= [
   },
   {
     path : 'contact', component:ContactComponent
+  },
+  {
+    path : ''
   },
   {
     path: '**', component: NotFoundComponent
