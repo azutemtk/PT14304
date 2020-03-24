@@ -17,11 +17,12 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { HttpClientModule} from '@angular/common/http';
 import { NewsListComponent } from './news-list/news-list.component';
 import { ContactComponent } from './contact/contact.component';
-import { EditProductComponent } from './edit-product/edit-product.component'
+import { EditProductComponent } from './edit-product/edit-product.component';
+import { ServiceComponent } from './service/service.component'
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule, HttpClientModule ],
-  declarations: [ AppComponent, HelloComponent, SliderComponent, ProductListComponent, CategoryComponent, ProductComponent, AddFormComponent, AddProductComponent, ProductManagerComponent, NotFoundComponent, ProductDetailComponent, NewsListComponent, ContactComponent, EditProductComponent ],
+  declarations: [ AppComponent, HelloComponent, SliderComponent, ProductListComponent, CategoryComponent, ProductComponent, AddFormComponent, AddProductComponent, ProductManagerComponent, NotFoundComponent, ProductDetailComponent, NewsListComponent, ContactComponent, EditProductComponent, ServiceComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

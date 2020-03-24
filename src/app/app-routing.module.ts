@@ -7,8 +7,9 @@ import { ProductManagerComponent } from './product-manager/product-manager.compo
 import { NotFoundComponent } from './not-found/not-found.component'
 import { ProductDetailComponent } from './product-detail/product-detail.component'
 import { NewsListComponent } from './news-list/news-list.component'
-// import { EditProductComponent } from './edit-product/edit-product.component'
-import { ContactComponent } from './contact/contact.component'
+import { EditProductComponent } from './edit-product/edit-product.component'
+import {  ContactComponent} from './contact/contact.component'
+import {  ServiceComponent} from './service/service.component'
 const routes: Routes= [
   {
     path: '', redirectTo:'home', pathMatch:'full'
@@ -26,9 +27,6 @@ const routes: Routes= [
   {
     path : 'product/:id', component:ProductDetailComponent
   },
-  // {
-  //   path : 'product/edit/:id', component:EditProductComponent
-  // },
   {
     path : 'product', component:ProductListComponent
   },
@@ -39,10 +37,13 @@ const routes: Routes= [
     path : 'manager/add', component:AddProductComponent
   },
   {
-    path : 'contact', component:ContactComponent
+    path : 'contact', component: ContactComponent
   },
   {
-    path : ''
+    path : 'service', component: ServiceComponent
+  },
+  {
+    path: 'edit/:productID', component: EditProductComponent
   },
   {
     path: '**', component: NotFoundComponent
