@@ -8,7 +8,7 @@ import { Product } from '../product'
 })
 export class ProductService {
   products = data;
-  api = 'http://5c999ea71a4c360014a0ff5b.mockapi.io/products';
+  api = 'https://5e79b4b817314d00161333da.mockapi.io/product';
   constructor(
     private http : HttpClient,
   ) { }
@@ -17,28 +17,34 @@ export class ProductService {
     return this.products;
   }
 
-  getProductFromApi(): Observable<Product[]>{
+  getProductsFromApi(): Observable<Product[]>{
     return this.http.get<Product[]>(this.api);
   }
 
-  getProduct(id){
+  // getProduct(id){
+  //   return this.products.find(product => product.id == id);
+  // }
+
+  getProductFromApi(id): Observable<Product>{
+    return this.http.get<Product>(`${this.api}/${id}`);
     // return this.products.find(product => product.id == id);
-    return this.http.get<Product>(`${this.api}/${id}`)
   }
 
-  removeProduct(id){
-    this.products.filter(product => product.id != id);
-    // this.products = this.products.filter(product => product.id != id);
-    // return this.products.filter(product => product.id !== id);
-  }
+  // removeProduct(id){
+  //   this.products.filter(product => product.id != id);
+  //   this.products = this.products.filter(product => product.id != id);
+  //   return this.products.filter(product => product.id !== id);
+  // }
 
   addProduct(product){
-    const newProduct = { id: 11, ...product};
-    this.products.push(newProduct);
-    console.log(this.products)
+    return this.http.post<Product>(`${this.api}`, product);
   }
 
-  updateProduct(): Observable<Product>{
-  return this.http.put<Product>(`{$this.api}/${product.id}`,product);
+  updateProduct(product){
+     return this.http.put<Product>(`${this.api}/${product.id}`, product);
+  }
+
+  deleteProduct(product){
+    return this.http.delete<Product>(`${this.api}/${product}`,product)
   }
 }

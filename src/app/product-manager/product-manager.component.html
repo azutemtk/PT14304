@@ -35,7 +35,8 @@
     <td class="text-center"><img src="{{product.img}}" style="width: 200px;height: 120px;"></td>
     <td>
       <button class="btn btn-primary" routerLink="/product/{{product.id}}">Chi tiết</button>
-      <i style="float: right;"><button class="btn btn-primary" (click)="removeItem(product.id)">Delete</button></i>
+      <button class="btn btn-primary" routerLink="/edit/{{product.id}}" style="margin-left: 60px;">Update</button>
+      <i style="float: right;"><button class="btn btn-primary" (click)="deleteProduct(product)">Delete</button></i>
       <a style="color: red; cursor: pointer; margin-left: 5px;" 
         title="Xóa">
         <i class="fa fa-trash-o"></i>

@@ -15,7 +15,10 @@ export class ProductManagerComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.products = this.productService.getProducts();
+    this.productService.getProductsFromApi().subscribe(data => {
+      console.log(data);
+      this.products = data;
+     });
   }
 
   removeItem(id){
