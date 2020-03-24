@@ -45,6 +45,6 @@ export class ProductService {
   }
 
   deleteProduct(product){
-    return this.http.delete<Product>(`${this.api}/${product}`,product)
+    return this.http.delete<Product>(`${this.api}/${product.id}`,product)
   }
 }
