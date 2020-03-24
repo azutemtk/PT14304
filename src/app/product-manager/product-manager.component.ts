@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../Product';
 import { ProductService } from '../services/product.service';
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-product-manager',
   templateUrl: './product-manager.component.html',
@@ -14,15 +15,22 @@ export class ProductManagerComponent implements OnInit {
     
    }
 
+  
   ngOnInit() {
+    this.getProduct();
+  }
+
+  deleteProduct(product){
+    this.productService.deleteProduct(product).subscribe(data =>{
+     console.log("Da xoa");
+     this.getProduct();
+    }) ; 
+  }
+  getProduct(){
     this.productService.getProductsFromApi().subscribe(data => {
       console.log(data);
       this.products = data;
      });
-  }
-
-  removeItem(id){
-    this.products = this.products.filter(product => product.id != id);
   }
 
 }
